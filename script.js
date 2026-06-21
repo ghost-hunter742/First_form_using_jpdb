@@ -212,3 +212,6 @@ function getEmp() {
         $("#empName").focus();
     }
 }
+$(document).ready(function () {
+    resetForm();
+});
