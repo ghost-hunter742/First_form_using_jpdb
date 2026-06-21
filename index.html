@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<!--
+To change this license header, choose License Headers in Project Properties.
+To change this template file, choose Tools | Templates
+and open the template in the editor.
+-->
+<html lang="en">
+    <head>
+        <title>Bootstrap Example</title>
+        <meta charset="utf-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <link rel="stylesheet"
+              href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/css/bootstrap.min.css">
+        <script
+        src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+        <script
+        src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/js/bootstrap.min.js"></script>
+    </head>
+    <body>
+        <div class="container">
+            <h1 class="text-center">Employee Form using the JPDB API</h1>
+            <form id="empForm" method="post">
+                <div class="form-group">
+                    <span><label for="empId">Employee ID:</label> <label id="empIdMsg">
+                        </label></span>
+                    <input type="text" class="form-control" name="empId" id="empId"
+                           placeholder="Enter Employee ID" onchange="getEmp()" required>
+                </div>
+                <div class="form-group">
+                    <label for="empName">Employee Name:</label>
+                    <input type="text" class="form-control" id="empName"
+                           placeholder="Enter Employee Name" name="empName">
+                </div>
+                <div class="form-group">
+                    <label for="basicSalary">Basic Salary:</label>
+                    <input type="text" class="form-control" id="basicSalary"
+                           placeholder="Enter Basic Salary" name="basicSalary">
+                </div>
+                <div class="form-group">
+                    <label for="hra">HRA:</label>
+                    <input type="text" class="form-control" id="hra"
+                           placeholder="Enter HRA" name="hra">
+                </div>
+                <div class="form-group">
+                    <label for="da">DA:</label>
+                    <input type="text" class="form-control" id="da"
+                           placeholder="Enter DA" name="da">
+                </div>
+                <div class="form-group">
+                    <label for="deduction">Deduction:</label>
+                    <input type="text" class="form-control" id="deduction"
+                           placeholder="Enter Deduction" name="deduction">
+                </div>
+                <div class="form-group text-center">
+                    <button type="button" class="btn btn-lg btn-primary" id="save" onclick="saveData()" disabled>Save</button>
+                    <button type="button" class="btn btn-lg btn-primary" id="change" onclick="changeData()" disabled>Change</button>
+                    <button type="button" class="btn btn-lg btn-primary" id="reset" onclick="resetForm()" disabled>Reset</button>
+                </div>
+            </form>
+        </div>
+        <script src="http://login2explore.com/jpdb/resources/js/0.0.3/jpdb.commons.js"></script>
+        <script src="script.js"></script>
+    </body>
+</html>
